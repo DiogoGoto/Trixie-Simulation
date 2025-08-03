@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "Trixie-Simulation"
+version = "0.0.0"
+description = "Tool for converting an image into a bits array for a LED Matrix"
+authors = ["diogo.goto <diogo.goto@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "trixie_simulation" }
+]
+include = ["poetry.lock", "requirements.txt"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4"
+pygame = "^2.1.0"
+pillow = "^9.0.0"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-cov = "*"
+
+[tool.poetry.scripts]
+img2arr = "trixie_simulation.converter:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
