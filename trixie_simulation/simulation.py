@@ -1,8 +1,6 @@
 from PIL import Image
-import argparse
 from pathlib import Path
 import pygame
-import sys
 
 
 class LedMatrixPreview:
